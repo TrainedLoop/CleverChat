@@ -1,0 +1,31 @@
+﻿@page
+@{
+    ViewData["Title"] = "CleverChat";
+}
+<div class="container">
+    <input type="hidden" id="cs" value="" />
+    <div class="row">
+        <div class="col-12 pre-scrollable" id="chat-window" style="height:340px">
+            <ul class="list-group" id="messagesList"></ul>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="userInput">Nome:</label>
+                <input type="text" class="form-control" id="userInput" value="Anônimo" />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="messageInput">Mensagem:</label>
+                <input type="text" class="form-control" id="messageInput">
+            </div>
+        </div>
+        <div class="col-sm-3" style="padding-top:25px">
+            <input type="button" id="sendButton" class="btn btn-success" value="Send Message" />
+        </div>
+    </div>
+</div>
+
+
+<script src="~/lib/signalr/signalr.js"></script>
+<script src="~/js/chat.js"></script>
